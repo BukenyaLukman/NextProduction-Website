@@ -1,0 +1,82 @@
+{% load static %}
+<section id="intro">
+    <div class="intro-container">
+      
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        
+
+        <div class="carousel-inner" role="listbox">
+          {% for item in intro %}
+          <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}" style="background-image: url({{item.background_image.url}})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">{{item.header}}</h2>
+                <p class="animate__animated animate__fadeInUp">{{item.description}}</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Learn More</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <!-- <div class="carousel-item" style="background-image: url({% static 'assets/img/intro-carousel/2.jpeg' %})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">At the Epitome of Quality</h2>
+                <p class="animate__animated animate__fadeInUp">Operation of studio facilities; and development of new entertainment products, services and technologies.</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Learn More</a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="carousel-item" style="background-image: url({% static 'assets/img/intro-carousel/3.jpeg' %})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Production House at One Stop Center</h2>
+                <p class="animate__animated animate__fadeInUp">Next Production Television operates dozens of wholly-owned or joint-venture production companies around East Africa. Next Production  organizations include Next Pictures, NBS Television Pictures</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Learn More</a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="carousel-item" style="background-image: url({% static 'assets/img/intro-carousel/4.jpeg' %})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Never Like Before</h2>
+                <p class="animate__animated animate__fadeInUp">Next Production Television operates dozens of wholly-owned or joint-venture production companies around East Africa. Next Production  organizations include Next Pictures, NBS Television Pictures</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Learn More</a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="carousel-item" style="background-image: url({% static 'assets/img/intro-carousel/3.jpg' %})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Our Diverse Production</h2>
+                <p class="animate__animated animate__fadeInUp">We offer a vast portfolio of modern characters and stories that connect with audiences from 3 to 70 years old. From bands of badass girl-bosses to tribes of evil geniuses, we reflect modern culture and welcome all to our family of misfits, heroes, upstarts and icons. Through this we build global franchises that are a reflection of our wonderfully diverse and complex consumers.</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Learn More</a>
+              </div>
+            </div>
+          </div> -->
+
+
+
+
+
+        </div>
+        
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  </section>
